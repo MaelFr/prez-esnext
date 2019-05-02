@@ -81,7 +81,18 @@ class Car extends Vehicle {
 
 
 ```js
-// Todo
+let myVar = "ma variable"
+function myFunction(){
+  return "ma fonction"
+} 
+
+let myString = `
+  Les littéraux de gabarits permettent d'utiliser des chaînes de caractères multi-lignes.
+  Par exemple, on peut afficher la valeur d'une variable de cette manière:
+  ${myVar}
+  On peut de la même façon afficher toute sorte d'expression, comme des retours de fonctions:
+  ${myFunction()}
+`
 ```
 
 ---
