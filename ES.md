@@ -135,10 +135,10 @@ function fn() {
 ### Const
 ```js
 function fn(){
-  // const myConst; // erreur, constante doit être initialisée
+  const myConst; // erreur, constante doit être initialisée
   const myConst = "ma constante"
   
-  // myConst = "modif" // erreur, la constante ne peut être réaffectée
+  myConst = "modif" // erreur, la constante ne peut être réaffectée
 
   if(myConst === "ma constante"){
     let myConst = "modif let"
