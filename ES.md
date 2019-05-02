@@ -88,7 +88,7 @@ function myFunction(){
 
 let myString = `
   Les littéraux de gabarits permettent d'utiliser des chaînes de caractères multi-lignes.
-  Par exemple, on peut afficher la valeur d'une variable de cette manière:
+  Aussi, on peut afficher la valeur d'une variable de cette manière:
   ${myVar}
   On peut de la même façon afficher toute sorte d'expression, comme des retours de fonctions:
   ${myFunction()}
@@ -102,7 +102,8 @@ let myString = `
 
 
 ```js
-// Todo
+[firstname, lastname, password] = ["Clark", "Kent", "azerty"]
+({firstname, lastname, password} = {firstname: "Kal", lastname: "El", password: "012345"})
 ```
 
 ---
