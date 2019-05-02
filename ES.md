@@ -87,10 +87,13 @@ function myFunction(){
 } 
 
 let myString = `
-  Les littéraux de gabarits permettent d'utiliser des chaînes de caractères multi-lignes.
-  Aussi, on peut afficher la valeur d'une variable de cette manière:
+  Les littéraux de gabarits permettent d'utiliser 
+  des chaînes de caractères multi-lignes.
+  Aussi, on peut afficher la valeur d'une variable 
+  de cette manière:
   ${myVar}
-  On peut de la même façon afficher toute sorte d'expression, comme des retours de fonctions:
+  On peut de la même façon afficher toute sorte 
+  d'expression, comme des retours de fonctions:
   ${myFunction()}
 `
 ```
@@ -102,14 +105,17 @@ let myString = `
 
 
 ```js
-[firstname, lastname, password] = ["Clark", "Kent", "azerty"]
-({firstname, lastname, password} = {firstname: "Kal", lastname: "El", password: "012345"})
+[firstname, lastname, password] = 
+["Clark", "Kent", "azerty"]
+
+({firstname, lastname, password} = 
+{firstname: "Kal", lastname: "El", password: "012345"})
 ```
 
 ---
 
 # ES 2015
-### Let
+### Let (1/2)
 
 
 ```js
@@ -122,7 +128,10 @@ function fn() {
     
     variableLet = "second let";
     variableVar = "second var";
-
+```
+---
+### Let (2/2)
+```js
     console.log(variableLet); // second let
     
     console.log(variableVar); // second var
@@ -132,27 +141,30 @@ function fn() {
   console.log(variableVar); // second var
 }
 ```
+---
 ### Const
 ```js
 function fn(){
-  const myConst; // erreur, constante doit être initialisée
+  const myConst; // erreur, constante doit être 
+  		 // initialisée
   const myConst = "ma constante"
   
-  myConst = "modif" // erreur, la constante ne peut être réaffectée
+  myConst = "modif" // erreur, la constante 
+  	           // ne peut être réaffectée
 
   if(myConst === "ma constante"){
     let myConst = "modif let"
 
-    var myConst = "modif var" // erreur, la variable est déjà déclarée
+    var myConst = "modif var" // erreur, la variable 
+    			     // est déjà déclarée
   }
 }
 ```
 ---
 
 # ES 2015
-### Modules
+### Modules - test.js
 
-#### test.js
 ```js
 export default class User{
   constructor(name, age){
@@ -169,7 +181,7 @@ export function printAge(user){
   console.log(`Age de l'utilisateur ${user.age}`)
 }
 ```
-
+---
 #### main.js
 ```js
 import U, {printName as pn, printAge as pa} from '/test.js'
