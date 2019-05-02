@@ -109,13 +109,44 @@ let myString = `
 ---
 
 # ES 2015
-### Let, Const
+### Let
 
 
 ```js
-// Todo
-```
+function fn() {
+  let variableLet = "permier let";
+  var variableVar = "premier var";
+  if (true) {
+    let variableLet; 
+    var variableVar;
+    
+    variableLet = "second let";
+    variableVar = "second var";
 
+    console.log(variableLet); // second let
+    
+    console.log(variableVar); // second var
+  }
+  console.log(variableLet); // premier let
+  
+  console.log(variableVar); // second var
+}
+```
+### Const
+```js
+function fn(){
+  // const myConst; // erreur, constante doit être initialisée
+  const myConst = "ma constante"
+  
+  // myConst = "modif" // erreur, la constante ne peut être réaffectée
+
+  if(myConst === "ma constante"){
+    let myConst = "modif let"
+
+    var myConst = "modif var" // erreur, la variable est déjà déclarée
+  }
+}
+```
 ---
 
 # ES 2015
