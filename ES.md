@@ -154,7 +154,37 @@ function fn(){
 
 
 ```js
-// Todo
+import U, {printName as pn, printAge as pa} from '/test.js'
+
+const user = new U('John', 30);
+console.log(user)
+
+pn(user) // log: Nom d'utilisateur John
+pa(user) // log: Age de l'utilisateur 30
+```
+
+```js
+export default class User{
+  constructor(name, age){
+    this.name = name;
+    this.age = age;
+  }
+} 
+
+export function printName(user){
+  console.log(`Nom d'utilisateur ${user.name}`)
+}
+
+export function printAge(user){
+  console.log(`Age de l'utilisateur ${user.age}`)
+}
+```
+
+```html
+<body>
+  
+  <script type="module" src="main.js"></script>
+</body>
 ```
 
 
