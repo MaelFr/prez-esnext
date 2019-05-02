@@ -152,17 +152,7 @@ function fn(){
 # ES 2015
 ### Modules
 
-
-```js
-import U, {printName as pn, printAge as pa} from '/test.js'
-
-const user = new U('John', 30);
-console.log(user)
-
-pn(user) // log: Nom d'utilisateur John
-pa(user) // log: Age de l'utilisateur 30
-```
-
+#### test.js
 ```js
 export default class User{
   constructor(name, age){
@@ -180,6 +170,18 @@ export function printAge(user){
 }
 ```
 
+#### main.js
+```js
+import U, {printName as pn, printAge as pa} from '/test.js'
+
+const user = new U('John', 30);
+console.log(user)
+
+pn(user) // log: Nom d'utilisateur John
+pa(user) // log: Age de l'utilisateur 30
+```
+
+#### index.html
 ```html
 <body>
   
