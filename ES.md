@@ -8,7 +8,7 @@ ES.Next
 
 # C'est quoi ES ?
 
-- **ECMA Script** ou ECMA-262
+- **ECMAScript** ou ECMA-262
 - ECMA: European Computer Manufacturers Association
 - JavaScript, ActionScript, V8, ...
 - Orienté **prototype**
@@ -23,7 +23,7 @@ ES.Next
 - 1999: troisième version
 - 2009: version suivante... la cinquième
 - juin 2015: ES6 :heart: :heart_eyes:
-- juin X: ES(X-2009)
+- ES.Next: juin X: ES(X-2009)
 
 ---
 <!-- template: gaia -->
@@ -37,6 +37,11 @@ ES.Next
 
 # ES 2015
 ### Arrows
+```js
+function(v) {
+  return v + 1;
+}
+```
 ```js
 v => v + 1
 
@@ -71,7 +76,35 @@ class Car extends Vehicle {
 
 
 ```js
-// Todo
+var prenom = "Jean";
+var nom = "Valjean";
+
+```
+```js
+return {
+  prenom: prenom,
+  nom: nom,
+}
+```
+```js
+return {
+  prenom,
+  nom,
+}
+```
+
+---
+
+# ES 2015
+### Object literals
+
+
+```js
+function action(type, data) {
+  return {
+    [type]: data,
+  };
+}
 ```
 
 ---
@@ -105,11 +138,15 @@ let myString = `
 
 
 ```js
-[firstname, lastname, password] = 
-["Clark", "Kent", "azerty"]
+const myArray = ["Clark", "Kent", "azerty"]
+[firstname, lastname, password] = myArray
 
-({firstname, lastname, password} = 
-{firstname: "Kal", lastname: "El", password: "012345"})
+const myObj = {firstname: "Kal",
+lastname: "El", password: "012345"}
+{firstname, lastname, password} = myObj
+
+function myFunc({firstname, lastname}) {…}
+myFunc(myObj)
 ```
 
 ---
@@ -316,3 +353,4 @@ Babel, TS
 - [medium.freecodecamp.org/here-are-examples-of-everything-new-in-ecmascript-2016-2017-and-2018](https://medium.freecodecamp.org/here-are-examples-of-everything-new-in-ecmascript-2016-2017-and-2018-d52fa3b5a70e)
 - [GitHub TC39](https://github.com/tc39)
 - ["ES Next Features That'll Make You Dance" by Ben Ilegbodu at Node Summit 2018](https://www.youtube.com/watch?v=9yK4t2CuIHQ)
+- [can i use](https://caniuse.com/)

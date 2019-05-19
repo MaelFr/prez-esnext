@@ -1,0 +1,34 @@
+2.
+- Langage de script, faiblement typé et dynamique
+- Ecma International maintenant, normes CD-ROM, C#, C++, JSON (404), Dart
+- Implems: JScript, Qt, Google Apps Script
+- Influancé par C, Perl, Python, Java
+
+3.
+- date de création réelle pour Netscape, premier nom Mocha, puis LiveScript, en décembre annoncé dans la presse
+- adoption par ecma
+- gestion des erreurs, regex, …
+- version 4 abandonnée pour des raisons de désacords, certaines features seront ajoutées dans la v6, v5 ne devait être qu'une 3.1
+- grosses nouveautés, certaines reprises de la v4 (classes, modules, iterators et generators, destructuration)
+- ES.Next nom dynamique des versions futures
+
+4.
+Un point sur la révolution et renommage
+
+5.
+Attention au `this`
+
+6.
+propriétés raccourcies
+
+7.
+propriétés calculées
+
+8.
+template strings
+
+9.
+destructuration
+
+10.
+let scopé, la déclaration dans les accolades n'écrase pas celle du scope supérieur, mais préférer ne pas avoir des variables de même nom pour une meilleure lisibilité et évité les confusions alors que le var est global
