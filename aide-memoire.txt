@@ -32,3 +32,30 @@ destructuration
 
 10.
 let scopé, la déclaration dans les accolades n'écrase pas celle du scope supérieur, mais préférer ne pas avoir des variables de même nom pour une meilleure lisibilité et évité les confusions alors que le var est global
+
+11.
+const scopé comme let mais non modifiable
+
+12.
+modules
+un fichier = un module
+export par défaut ou nommé
+
+13.
+import par défaut, nommé
+
+14.
+map: clé/valeur où des objets peuvent être utilisés comme clé ou comme valeur
+les clés sont ordonnées selon leur ordre d'insertion
+règles spécifiques d'égalité des clés, stict sauf exceptions NaN = NaN alors que NaN !== NaN
+set: 
+
+
+
+?.
+Promises
+Une Promise est dans un de ces états :
+pending (en attente) : état initial, la promesse n'est ni remplie, ni rompue ;
+fulfilled (tenue) : l'opération a réussi ;
+rejected (rompue) : l'opération a échoué ;
+settled (acquittée) : la promesse est tenue ou rompue mais elle n'est plus en attente.

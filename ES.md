@@ -219,34 +219,19 @@ export function printAge(user){
 }
 ```
 ---
-#### main.js
-```js
-import U, {printName as pn, printAge as pa} from '/test.js'
-
-const user = new U('John', 30);
-console.log(user)
-
-pn(user) // log: Nom d'utilisateur John
-pa(user) // log: Age de l'utilisateur 30
-```
-
-#### index.html
-```html
-<body>
-  
-  <script type="module" src="main.js"></script>
-</body>
-```
-
-
----
 
 # ES 2015
 ### Module loaders
 
-
+#### main.js
 ```js
-// Todo
+import U, {printName, printAge as pa} from '/test.js'
+
+const user = new U('John', 30);
+console.log(user)
+
+printName(user) // log: Nom d'utilisateur John
+pa(user) // log: Age de l'utilisateur 30
 ```
 
 ---
@@ -256,7 +241,11 @@ pa(user) // log: Age de l'utilisateur 30
 
 
 ```js
-// Todo
+const myMap = new Map([[1 , "toto"],[2, "truc"]]);
+myMap.size() // 2
+myMap.has(1) // true
+myMap.set(3, "titi")
+myMap.get(2) // truc
 ```
 
 ---
@@ -266,7 +255,19 @@ pa(user) // log: Age de l'utilisateur 30
 
 
 ```js
-// Todo
+var promise1 = new Promise(function(resolve, reject) {
+  setTimeout(function() {
+    resolve('foo');
+  }, 300);
+});
+
+promise1.then(function(value) {
+  console.log(value);
+  // expected output: "foo"
+});
+
+console.log(promise1);
+// expected output: [object Promise]
 ```
 
 ---
