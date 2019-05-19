@@ -35,7 +35,6 @@ ES.Next
 ---
 <!-- template: default -->
 
-# ES 2015
 ### Arrows
 ```js
 function(v) {
@@ -56,9 +55,7 @@ v => {
 
 ---
 
-# ES 2015
 ### Classes
-
 
 ```js
 class Car extends Vehicle {
@@ -71,9 +68,7 @@ class Car extends Vehicle {
 
 ---
 
-# ES 2015
-### Object literals
-
+### Object literals - 1
 
 ```js
 var prenom = "Jean";
@@ -95,9 +90,7 @@ return {
 
 ---
 
-# ES 2015
-### Object literals
-
+### Object literals - 2
 
 ```js
 function action(type, data) {
@@ -109,9 +102,7 @@ function action(type, data) {
 
 ---
 
-# ES 2015
 ### Template strings
-
 
 ```js
 let myVar = "ma variable"
@@ -133,9 +124,7 @@ let myString = `
 
 ---
 
-# ES 2015
 ### Destructuring
-
 
 ```js
 const myArray = ["Clark", "Kent", "azerty"]
@@ -151,9 +140,7 @@ myFunc(myObj)
 
 ---
 
-# ES 2015
-### Let (1/2)
-
+### Let - 1
 
 ```js
 function fn() {
@@ -165,21 +152,19 @@ function fn() {
     
     variableLet = "second let";
     variableVar = "second var";
-```
----
-### Let (2/2)
-```js
-    console.log(variableLet); // second let
     
+    console.log(variableLet); // second let
     console.log(variableVar); // second var
   }
   console.log(variableLet); // premier let
-  
   console.log(variableVar); // second var
 }
 ```
+
 ---
+
 ### Const
+
 ```js
 function fn(){
   const myConst; // erreur, constante doit être 
@@ -197,10 +182,12 @@ function fn(){
   }
 }
 ```
+
 ---
 
-# ES 2015
-### Modules - test.js
+### Modules
+
+#### test.js
 
 ```js
 export default class User{
@@ -218,12 +205,13 @@ export function printAge(user){
   console.log(`Age de l'utilisateur ${user.age}`)
 }
 ```
+
 ---
 
-# ES 2015
 ### Module loaders
 
 #### main.js
+
 ```js
 import U, {printName, printAge as pa} from '/test.js'
 
@@ -236,23 +224,45 @@ pa(user) // log: Age de l'utilisateur 30
 
 ---
 
-# ES 2015
-### Map, Set
-
+### Map
 
 ```js
-const myMap = new Map([[1 , "toto"],[2, "truc"]]);
-myMap.size() // 2
+const myMap = new Map([[1, "toto"],[2, "truc"]]);
+
+myMap.size // 2
+
 myMap.has(1) // true
+
 myMap.set(3, "titi")
+
 myMap.get(2) // truc
 ```
 
 ---
 
-# ES 2015
-### Promises
+### Set
 
+```js
+const mySet = new Set([1, "toto", "truc"]);
+
+mySet.size // 3
+
+mySet.has(2) // false
+
+mySet.add("titi")
+
+mySet.delete("toto") // "toto"
+```
+
+```js
+const nombres = [2,3,4,4,2,2,2,4,4,5,5,6,6,7,5,32,3,4,5];
+console.log([...new Set(nombres)]);
+// affichera [2, 3, 4, 5, 6, 7, 32]
+```
+
+---
+
+### Promises
 
 ```js
 var promise1 = new Promise(function(resolve, reject) {
@@ -272,27 +282,30 @@ console.log(promise1);
 
 ---
 
-# ES 2015
 #### Mais aussi
-// Todo
+- Iterators &  Generators
+- Binary & Octal
+- Symbol
+- Intl
+- …
 
 ---
 
 # ES 2016
+
 - Array.includes()
 - `7**2` raccourci `Math.pow(7, 2)`
 
 ---
 
 # ES 2017
-- **async/await** :fire:
+
 - Object.values() && Object.entries()
 - String.pad{Start,End}
 
 ---
 
-# ES 2017
-#### Async/Await
+#### Async/Await :fire:
 
 ```js
 // ES 2015
@@ -305,7 +318,7 @@ function doTheJob(id) {
 }
 
 // ES 2017
-asyncv function doTheJob(id) {
+async function doTheJob(id) {
   const user = await getUser(id);
   const result = await runALongProcess(user);
   console.log(result);
@@ -316,6 +329,7 @@ asyncv function doTheJob(id) {
 ---
 
 # ES 2018
+
 - Object rest/spread operator
 - Promise.finally
 - Boucles asynchrones
@@ -326,20 +340,26 @@ asyncv function doTheJob(id) {
 # ES... Next ?
 TC39
 [Proposals](https://github.com/tc39/proposals)
-Stages
 Feature doit être dans la dernière étape au 1er février, sinon passe l'année suivante
-- 4 (Finished): Spec complète et 2 implémentations réelles
-- 3 (Candidate): Spec complète, doit être implémenté
-- 2 (Draft): Formaliser les specs
-- 1 (Proposal): A un "Champion", Identifie un problème et propose une solution, Specs en cours d'écriture
-- 0 (Strawman): Spec à la louche, attente de feedback 
 
 ---
 
-# ES.Next
+#### Stages
+
+- 0 (Strawman): Spec à la louche, attente de feedback
+- 1 (Proposal): A un "Champion", Identifie un problème et propose une solution, Specs en cours d'écriture
+- 2 (Draft): Formaliser les specs
+- 3 (Candidate): Spec complète, doit être implémenté
+- 4 (Finished): Spec complète et 2 implémentations réelles
+
+---
+
+#### Exemples
 Optional catch binding (stage 4)
+[Dynamic import](https://github.com/tc39/proposal-dynamic-import) (stage 3)
 [Static class features](https://github.com/tc39/proposal-static-class-features/) (stage 3)
 [Private methods](https://github.com/tc39/proposal-private-methods) (stage 3)
+[Temporal](https://github.com/tc39/proposal-temporal) (stage 2)
 [Optional Chaining](https://github.com/tc39/proposal-optional-chaining) (stage 1)
 
 ---
@@ -355,3 +375,4 @@ Babel, TS
 - [GitHub TC39](https://github.com/tc39)
 - ["ES Next Features That'll Make You Dance" by Ben Ilegbodu at Node Summit 2018](https://www.youtube.com/watch?v=9yK4t2CuIHQ)
 - [can i use](https://caniuse.com/)
+- [es6-features](http://es6-features.org)

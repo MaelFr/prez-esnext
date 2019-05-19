@@ -45,17 +45,24 @@ export par défaut ou nommé
 import par défaut, nommé
 
 14.
-map: clé/valeur où des objets peuvent être utilisés comme clé ou comme valeur
+map: très proche de l'objet, clé/valeur où des objets peuvent être utilisés comme clé ou comme valeur
 les clés sont ordonnées selon leur ordre d'insertion
 règles spécifiques d'égalité des clés, stict sauf exceptions NaN = NaN alors que NaN !== NaN
-set: 
 
+15.
+set: permet de stocker des valeurs uniques, de n'importe quel type, que ce soit des valeurs d'un type primitif ou des objets.
 
+sont itérables avec for…of
 
-?.
+16.
 Promises
 Une Promise est dans un de ces états :
 pending (en attente) : état initial, la promesse n'est ni remplie, ni rompue ;
 fulfilled (tenue) : l'opération a réussi ;
 rejected (rompue) : l'opération a échoué ;
 settled (acquittée) : la promesse est tenue ou rompue mais elle n'est plus en attente.
+
+
+
+
+
