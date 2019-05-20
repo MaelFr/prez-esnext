@@ -450,10 +450,32 @@ myFunc?.()
 
 ---
 
+[Binary AST](https://github.com/tc39/proposal-optional-chaining) (stage 1)
+
+Abstract Syntax tree
+Amélioration des performances lors du chargement et du parsing
+
+---
+
 [Temporal](https://github.com/tc39/proposal-temporal) (stage 2)
 
 ```js
-// Todo
+// Temporal
+let dateTimeAnywhere =
+    new CivilDateTime(2000, 12, 31, 23, 59)
+let instantInChicago =
+    dateTimeAnywhere.withZone('America/Chicago');
+let instantInSydney =
+    new ZonedDateTime(
+        instantInChicago.instant, 'Australia/Sydney'
+    )
+let calendarClockDateTimeFromSydney =
+    instantInSydney.toCivilDateTime()
+    
+dateTimeAnywhere.toString()
+    // 2000-12-31T23:59:00.000000000
+calendarClockDateTimeFromSydney.toString()
+    // 2001-01-01T16:59:00.000000000
 ```
 
 ---
@@ -461,15 +483,16 @@ myFunc?.()
 [Dynamic import](https://github.com/tc39/proposal-dynamic-import) (stage 3)
 
 ```js
-// Todo
+import module from 'myModule';
 ```
-
----
-
-[Static class features](https://github.com/tc39/proposal-static-class-features/) (stage 3)
-
 ```js
-// Todo
+import(`./myModule.js`)
+    .then(module => {
+        module.loadPageInto(main);
+    })
+    .catch(err => {
+        main.textContent = err.message;
+    });
 ```
 
 ---
@@ -477,15 +500,32 @@ myFunc?.()
 [Private methods](https://github.com/tc39/proposal-private-methods) (stage 3)
 
 ```js
-// Todo
+class Test {
+  #value = 0;
+  
+  get #x() { return #xValue; }
+  set #x(value) {
+    this.#xValue = value;
+  }}
+  
+  #clicked() {
+    this.#x++;
+  }
+}
 ```
 
 ---
 
-Optional catch binding (stage 4)
+[Static class features](https://github.com/tc39/proposal-static-class-features/) (stage 3)
 
 ```js
-// Todo
+class Test {
+  static #color = "#123456";
+  static #privMethod(color) {…}
+  static #otherMethod() {
+    Test.#privMethod(Test.#color)
+  }
+}
 ```
 
 ---
@@ -494,8 +534,7 @@ Optional catch binding (stage 4)
 ### On peut déjà en utiliser certaines
 
 - nativement
-- via un transpileur
-Babel, TS
+- via un transpileur: Babel, TypeScript
 
 ---
 <!-- template: normal -->
