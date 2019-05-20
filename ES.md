@@ -290,15 +290,27 @@ console.log(promise1);
 - …
 
 ---
+<!-- template: gaia -->
 
 # ES 2016
+
+---
+<!-- template: normal -->
+
+### ES 2016
 
 - Array.includes()
 - `7**2` raccourci `Math.pow(7, 2)`
 
 ---
+<!-- template: gaia -->
 
 # ES 2017
+
+---
+<!-- template: nprmal -->
+
+### ES 2017
 
 - Object.values() && Object.entries()
 - String.pad{Start,End}
@@ -327,8 +339,14 @@ async function doTheJob(id) {
 ```
 
 ---
+<!-- template: gaia -->
 
 # ES 2018
+
+---
+<!-- template: normal -->
+
+### ES 2018
 
 - Object rest/spread operator
 - Promise.finally
@@ -336,39 +354,152 @@ async function doTheJob(id) {
 - RegExp: groupes de captures nommés
 
 ---
+<!-- template: gaia -->
 
-# ES... Next ?
+# ES 2019
+
+---
+<!-- template: normal -->
+
+### ES 2019
+
+// Todo
+
+---
+<!-- template: gaia -->
+
+# ES.Next ?
+
+---
+<!-- template: normal -->
+
 TC39
 [Proposals](https://github.com/tc39/proposals)
 Feature doit être dans la dernière étape au 1er février, sinon passe l'année suivante
+
+// Todo: voir process et stages
 
 ---
 
 #### Stages
 
-- 0 (Strawman): Spec à la louche, attente de feedback
-- 1 (Proposal): A un "Champion", Identifie un problème et propose une solution, Specs en cours d'écriture
-- 2 (Draft): Formaliser les specs
+- 0 (Strawman): Entrée dans le process
+- 1 (Proposal): A un "Champion", Identifie un problème et propose une solution, specs en cours d'écriture
+- 2 (Draft): Formalisation des specs, syntax et la sémantique
 - 3 (Candidate): Spec complète, doit être implémenté
 - 4 (Finished): Spec complète et 2 implémentations réelles
 
 ---
+<!-- template: invert -->
 
-#### Exemples
-Optional catch binding (stage 4)
-[Dynamic import](https://github.com/tc39/proposal-dynamic-import) (stage 3)
-[Static class features](https://github.com/tc39/proposal-static-class-features/) (stage 3)
-[Private methods](https://github.com/tc39/proposal-private-methods) (stage 3)
-[Temporal](https://github.com/tc39/proposal-temporal) (stage 2)
-[Optional Chaining](https://github.com/tc39/proposal-optional-chaining) (stage 1)
+# Exemples
+
+---
+<!-- template: normal -->
+
+[Decimal](https://docs.google.com/presentation/d/1jPsw7EGsS6BW59_BDRu9o0o3UwSXQeUhi38QG55ZoPI/edit?pli=1#slide=id.p) (stage 0)
+
+```js
+// Number (binary 64-bit floating point)
+0.1 + 0.2
+=> 			0.30000000000000004
+// Decimal (???)
+0.1m + 0.2m
+=> 			0.3m
+
+```
 
 ---
 
-# ES.Next
-#### On peut déjà en utiliser certaines
+[Object shortand improvements](https://github.com/rbuckton/proposal-shorthand-improvements)
+
+###### Initialisation
+```js
+// Before
+const myObj = { x: a.x };
+// After
+const myObj = { a.x };
+```
+###### Destructuration
+```js
+// Before
+const { x: a.x } = myObj ;
+// After
+const { a.x } = myObj;
+```
+
+---
+
+[Optional Chaining](https://github.com/tc39/proposal-optional-chaining) (stage 1)
+
+```js
+// Before
+var street = user.address && user.address.street;
+// After
+var street = user.address?.street
+
+// Before
+var fooInput = myForm.querySelector('input[name=foo]')
+var fooValue = fooInput ? fooInput.value : undefined
+// After
+var fooValue = myForm.querySelector('input[name=foo]')?.value
+
+// New
+myFunc?.()
+```
+
+---
+
+[Temporal](https://github.com/tc39/proposal-temporal) (stage 2)
+
+```js
+// Todo
+```
+
+---
+
+[Dynamic import](https://github.com/tc39/proposal-dynamic-import) (stage 3)
+
+```js
+// Todo
+```
+
+---
+
+[Static class features](https://github.com/tc39/proposal-static-class-features/) (stage 3)
+
+```js
+// Todo
+```
+
+---
+
+[Private methods](https://github.com/tc39/proposal-private-methods) (stage 3)
+
+```js
+// Todo
+```
+
+---
+
+Optional catch binding (stage 4)
+
+```js
+// Todo
+```
+
+---
+<!-- template: invert -->
+
+### On peut déjà en utiliser certaines
+
+- nativement
+- via un transpileur
 Babel, TS
 
 ---
+<!-- template: normal -->
+
 # Sources
 - [ES6 sur Wikipédia](https://en.wikipedia.org/wiki/ECMAScript)
 - [medium.freecodecamp.org/here-are-examples-of-everything-new-in-ecmascript-2016-2017-and-2018](https://medium.freecodecamp.org/here-are-examples-of-everything-new-in-ecmascript-2016-2017-and-2018-d52fa3b5a70e)
@@ -376,3 +507,4 @@ Babel, TS
 - ["ES Next Features That'll Make You Dance" by Ben Ilegbodu at Node Summit 2018](https://www.youtube.com/watch?v=9yK4t2CuIHQ)
 - [can i use](https://caniuse.com/)
 - [es6-features](http://es6-features.org)
+- [Tous les détails du process](https://tc39.github.io/process-document/)
