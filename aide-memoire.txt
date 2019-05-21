@@ -14,6 +14,7 @@
 
 4.
 Un point sur la révolution et renommage
+Bcp d'évolutions, de nouvelles manières décrire, simplification pour le développeur
 
 5.
 Attention au `this`
@@ -63,6 +64,27 @@ rejected (rompue) : l'opération a échoué ;
 settled (acquittée) : la promesse est tenue ou rompue mais elle n'est plus en attente.
 
 
+ES.Next
+Decimal: permettra de régler le problème des nombres décimaux approximatifs
+
+Object shortand improvement: permet de nommer la propriété du nom de la propriété dont il vient où dont il est extrait
+
+Optional chaining: évitera les tests successifs ou les contournements
+
+Binary AST: Abstract Syntax Tree: arbre de la syntaxe abstraite:
+  (utilisé par analyseur syntaxique comme intermédaire entre un arbre d'analyse et une structure de données. C'est un intermédiaire pendant l' optimisation.)
+  Amélioration des performances lors du chargement et du parsing (cold laod time)
+  Par exemple dans la version 7 de PHP, permet d'améliorer les perfs.
+  Porté par les géants du web (FB, Mozilla, CloudFare,...)
+  For parsing desktop facebook.com, 10-15% of client-side CPU time is spent parsing JavaScript. The prototype we implemented reduced time to build the AST by 70-90%.
+
+Temporal: Faciliter la gestion des dates et des fuseaux horaires
+
+Dynamic import: Import dynamique renvoie une promesse, utile pour des fonctions secondaire et le code splitting
+
+Private methods: 
+
+Static class features: déjà faisable (voir la proposal) mais facilité
 
 
 
