@@ -378,15 +378,7 @@ async function doTheJob(id) {
 ---
 <!-- template: normal -->
 
-TC39
-[Proposals](https://github.com/tc39/proposals)
-Feature doit être dans la dernière étape au 1er février, sinon passe l'année suivante
-
-// Todo: voir process et stages
-
----
-
-#### Stages
+#### [TC39 Proposal Stages]((https://github.com/tc39/proposals))
 
 - 0 (Strawman): Entrée dans le process
 - 1 (Proposal): A un "Champion", Identifie un problème et propose une solution, specs en cours d'écriture
