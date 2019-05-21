@@ -362,7 +362,13 @@ async function doTheJob(id) {
 
 ### ES 2019
 
-// Todo
+- Array.prototype.{flat,flatMap}
+- Object.fromEntries
+- String.prototype.{trimStart, trimEnd}
+- Optional Catch Binding
+- Function.prototype.toString
+- Symbol.prototype.description
+- améliorations JSON
 
 ---
 <!-- template: gaia -->
