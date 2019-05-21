@@ -378,7 +378,7 @@ async function doTheJob(id) {
 ---
 <!-- template: normal -->
 
-#### [TC39 Proposal Stages]((https://github.com/tc39/proposals))
+#### [TC39 Proposal Stages](https://github.com/tc39/proposals)
 
 - 0 (Strawman): Entrée dans le process
 - 1 (Proposal): A un "Champion", Identifie un problème et propose une solution, specs en cours d'écriture
