@@ -111,11 +111,10 @@ function myFunction(){
 } 
 
 let myString = `
-  Les littéraux de gabarits permettent d'utiliser 
+  Les template strings permettent d'utiliser 
   des chaînes de caractères multi-lignes.
   Aussi, on peut afficher la valeur d'une variable 
-  de cette manière:
-  ${myVar}
+  de cette manière: ${myVar}
   On peut de la même façon afficher toute sorte 
   d'expression, comme des retours de fonctions:
   ${myFunction()}
@@ -531,7 +530,7 @@ class Test {
 ---
 <!-- template: invert -->
 
-### On peut déjà en utiliser certaines
+### On peut déjà les utiliser
 
 - nativement
 - via un transpileur: Babel, TypeScript
