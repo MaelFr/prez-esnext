@@ -139,11 +139,11 @@ myFunc(myObj)
 
 ---
 
-### Let - 1
+### Let
 
 ```js
 function fn() {
-  let variableLet = "permier let";
+  let variableLet = "premier let";
   var variableVar = "premier var";
   if (true) {
     let variableLet; 
@@ -461,12 +461,8 @@ myFunc?.()
 
 ```js
 // Date
-// time zone not supported, an offset must be used instead
-// Whatever provides the offset needs to know when to provide -05:00 vs -06:00 for Chicago.
-let timestampInChicago =
-    Date.parse("2000-12-31T23:59:00-06:00")
-let dateInLocalTimeZone =
-    new Date(timestampInChicago)
+let timestampInChicago = Date.parse("2000-12-31T23:59:00-06:00")
+let dateInLocalTimeZone = new Date(timestampInChicago)
 let formatterInSydney =
     new Intl.DateTimeFormat('en-US',
       { timeZone: 'Australia/Sydney', year: 'numeric',
@@ -570,9 +566,9 @@ class Test {
 <!-- template: normal -->
 
 # Sources
-- ["ES Next Features That'll Make You Dance" by Ben Ilegbodu at Node Summit 2018](https://www.youtube.com/watch?v=9yK4t2CuIHQ)
+- [ES Next Features That'll Make You Dance](https://www.youtube.com/watch?v=9yK4t2CuIHQ)
 - [ES6 sur Wikipédia](https://en.wikipedia.org/wiki/ECMAScript)
-- [medium.freecodecamp.org/here-are-examples-of-everything-new-in-ecmascript-2016-2017-and-2018](https://medium.freecodecamp.org/here-are-examples-of-everything-new-in-ecmascript-2016-2017-and-2018-d52fa3b5a70e)
+- [Examples of everything new in ES 2016 2017 and 2018](https://medium.freecodecamp.org/here-are-examples-of-everything-new-in-ecmascript-2016-2017-and-2018-d52fa3b5a70e)
 - [GitHub TC39](https://github.com/tc39)
 - [Tous les détails du process](https://tc39.github.io/process-document/)
 - [Repo des proposals](https://github.com/tc39/proposals)
