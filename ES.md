@@ -378,7 +378,7 @@ async function doTheJob(id) {
 ---
 <!-- template: normal -->
 
-#### [TC39 Proposal Stages](https://github.com/tc39/proposals)
+#### [TC39 Proposal Stages](https://tc39.github.io/process-document/)
 
 - 0 (Strawman): Entrée dans le process
 - 1 (Proposal): A un "Champion", Identifie un problème et propose une solution, specs en cours d'écriture
@@ -390,6 +390,7 @@ async function doTheJob(id) {
 <!-- template: invert -->
 
 # Exemples
+##### [Proposals](https://github.com/tc39/proposals)
 
 ---
 <!-- template: normal -->
@@ -574,5 +575,6 @@ class Test {
 - [medium.freecodecamp.org/here-are-examples-of-everything-new-in-ecmascript-2016-2017-and-2018](https://medium.freecodecamp.org/here-are-examples-of-everything-new-in-ecmascript-2016-2017-and-2018-d52fa3b5a70e)
 - [GitHub TC39](https://github.com/tc39)
 - [Tous les détails du process](https://tc39.github.io/process-document/)
+- [Repo des proposals](https://github.com/tc39/proposals)
 - [can i use](https://caniuse.com/)
 - [es6-features](http://es6-features.org)
