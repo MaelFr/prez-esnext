@@ -457,12 +457,42 @@ myFunc?.()
 
 [Binary AST](https://github.com/tc39/proposal-optional-chaining) (stage 1)
 
-Abstract Syntax tree
-Amélioration des performances lors du chargement et du parsing
+**Abstract Syntax Tree** : Arbre de la Syntaxe Abstraite
+> est un arbre dont les nœuds internes sont marqués par des opérateurs
+> et dont les feuilles (ou nœuds externes) représentent les opérandes de ces opérateurs.
+> Autrement dit, généralement, une feuille est une variable ou une constante.
 
 ---
 
 [Temporal](https://github.com/tc39/proposal-temporal) (stage 2)
+
+```js
+// Date
+// time zone not supported, an offset must be used instead
+// Whatever provides the offset needs to know when to provide -05:00 vs -06:00 for Chicago.
+let timestampInChicago =
+    Date.parse("2000-12-31T23:59:00-06:00")
+let dateInLocalTimeZone =
+    new Date(timestampInChicago)
+let formatterInSydney =
+    new Intl.DateTimeFormat('en-US',
+      { timeZone: 'Australia/Sydney', year: 'numeric',
+        month: 'numeric', day: 'numeric', hour: 'numeric',
+        minute: 'numeric', second: 'numeric' })
+let formatterInChicago =
+    new Intl.DateTimeFormat('en-US',
+      { timeZone: 'America/Chicago', year: 'numeric',
+        month: 'numeric', day: 'numeric', hour: 'numeric',
+        minute: 'numeric', second: 'numeric' })
+dateInLocalTimeZone.toISOString()
+    // 2001-01-01T05:59:00.000Z
+formatterInSydney.format(dateInLocalTimeZone)
+    // 1/1/2001, 4:59:00 PM
+formatterInChicago.format(dateInLocalTimeZone)
+    // 12/31/2000, 11:59:00 PM
+```
+
+---
 
 ```js
 // Temporal
@@ -539,16 +569,18 @@ class Test {
 ### On peut déjà les utiliser
 
 - nativement
-- via un transpileur: Babel, TypeScript
+- via un transpileur
+-- Babel: preset-stage-X
+-- Typescript: config: --lib et --target
 
 ---
 <!-- template: normal -->
 
 # Sources
+- ["ES Next Features That'll Make You Dance" by Ben Ilegbodu at Node Summit 2018](https://www.youtube.com/watch?v=9yK4t2CuIHQ)
 - [ES6 sur Wikipédia](https://en.wikipedia.org/wiki/ECMAScript)
 - [medium.freecodecamp.org/here-are-examples-of-everything-new-in-ecmascript-2016-2017-and-2018](https://medium.freecodecamp.org/here-are-examples-of-everything-new-in-ecmascript-2016-2017-and-2018-d52fa3b5a70e)
 - [GitHub TC39](https://github.com/tc39)
-- ["ES Next Features That'll Make You Dance" by Ben Ilegbodu at Node Summit 2018](https://www.youtube.com/watch?v=9yK4t2CuIHQ)
+- [Tous les détails du process](https://tc39.github.io/process-document/)
 - [can i use](https://caniuse.com/)
 - [es6-features](http://es6-features.org)
-- [Tous les détails du process](https://tc39.github.io/process-document/)
